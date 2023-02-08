@@ -13,8 +13,6 @@ logger = get_logger("google-cloud-platform-whitelist-feed")
 class GoogleCloudPlatformWhitelistFeed(Connector):
     def execute(self, config, operation, params, **kwargs):
         try:
-            connector_info = {"connector_name": self._info_json.get("name"),
-                              "connector_version": self._info_json.get("version")}
             operation = operations.get(operation)
         except Exception as err:
             logger.exception(err)
@@ -23,7 +21,5 @@ class GoogleCloudPlatformWhitelistFeed(Connector):
 
     def check_health(self, config):
         logger.info("starting health check")
-        connector_info = {"connector_name": self._info_json.get("name"),
-                          "connector_version": self._info_json.get("version")}
         check_health_ex(config)
         logger.info("completed health check no errors")
