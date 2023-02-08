@@ -62,7 +62,7 @@ def ip_ranges(config, params):
     prefixes1 = res1.get("prefixes", [])
     res2 = ob.api_request(Method.GET, "cloud.json")
     prefixes2 = res2.get("prefixes", [])
-    all_prefixes = (prefixes2 + prefixes1)[0:5]
+    all_prefixes = prefixes2 + prefixes1
     res2["prefixes"] = all_prefixes
     return res2
 
