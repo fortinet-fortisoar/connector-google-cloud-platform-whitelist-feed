@@ -1,0 +1,77 @@
+{
+  "name": "google-cloud-platform-whitelist-feed",
+  "version": "1.0.0",
+  "label": "Google Cloud Platform Whitelist Feed",
+  "category": "Threat Intelligence",
+  "description": "Google Cloud Platform publishes its current IP address ranges in JSON format. This connector facilitates automated operations to fetch these indicators and ingestion of daily threat feeds.",
+  "publisher": "Fortinet",
+  "cs_approved": true,
+  "cs_compatible": true,
+  "help_online": "",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "ingestion_supported": true,
+  "ingestion_modes": [
+    "scheduled"
+  ],
+  "tags": [
+    "ThreatIntel"
+  ],
+  "ingestion_preferences": {
+    "modules": [
+      "threat_intel_feeds",
+      "indicators"
+    ]
+  },
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "name": "server_url",
+        "description": "The service-based URL to which you will connect and perform the automated operations.",
+        "type": "text",
+        "visible": true,
+        "editable": true,
+        "required": true,
+        "value": "https://www.gstatic.com/ipranges/"
+      },
+      {
+        "title": "Verify SSL",
+        "name": "verify_ssl",
+        "description": "Specifies whether the SSL certificate for the server is to be verified or not. By default, this option is set as True.",
+        "type": "checkbox",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "value": true
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "ip_ranges",
+      "description": "Retrieves the IP ranges that Google makes available to users on the internet.",
+      "category": "investigation",
+      "annotation": "get_ip_ranges",
+      "title": "Get IP Ranges",
+      "enabled": true,
+      "parameters": [],
+      "output_schema": {
+        "syncToken": "",
+        "creationTime": "",
+        "prefixes": [
+          {
+            "ipv4Prefix": "",
+            "service": "",
+            "scope": ""
+          },
+          {
+            "ipv6Prefix": "",
+            "service": "",
+            "scope": ""
+          }
+        ]
+      }
+    }
+  ]
+}
