@@ -2,7 +2,7 @@
   "name": "google-cloud-platform-whitelist-feed",
   "version": "1.0.0",
   "label": "Google Cloud Platform Whitelist Feed",
-  "category": "Network Security",
+  "category": "Threat Intelligence",
   "description": "Google Cloud Platform publishes its current IP address ranges in JSON format. This connector facilitates automated operations to fetch these indicators and ingestion of daily threat feeds.",
   "publisher": "Fortinet",
   "cs_approved": true,
@@ -14,6 +14,15 @@
   "ingestion_modes": [
     "scheduled"
   ],
+  "tags": [
+    "ThreatIntel"
+  ],
+  "ingestion_preferences": {
+    "modules": [
+      "threat_intel_feeds",
+      "indicators"
+    ]
+  },
   "configuration": {
     "fields": [
       {
