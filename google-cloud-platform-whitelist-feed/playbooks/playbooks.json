@@ -7,10 +7,10 @@
       "name": "Sample - Google Cloud Platform Whitelist Feed - 1.0.0",
       "description": "Sample playbooks for \"Google Cloud Platform Whitelist Feed\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
-      "image": null,
-      "id": 201,
-      "createDate": 1675348568.067866,
-      "modifyDate": 1675348568.067866,
+      "image": "/api/3/images/313da960-26e7-469c-aef7-638d4fee7baf",
+      "id": 91,
+      "createDate": 1675769044.590711,
+      "modifyDate": 1675769044.590711,
       "deletedAt": null,
       "importedBy": [],
       "recordTags": [
@@ -32,7 +32,7 @@
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1675344001,
-          "collection": "/api/3/workflow_collections/72369965-48c9-4fc5-b1c2-35e64333a927",
+          "collection": "/api/3/workflow_collections/a50f3d93-72dd-4fae-84ae-450ba55f4410",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/bf6bf68d-0eae-4d25-ac76-a4fef826baa7",
           "steps": [
@@ -200,7 +200,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "75aebd74-2078-461d-91c1-d8a077488d81",
-          "id": 2981,
+          "id": 769,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -226,7 +226,7 @@
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1675340842,
-          "collection": "/api/3/workflow_collections/72369965-48c9-4fc5-b1c2-35e64333a927",
+          "collection": "/api/3/workflow_collections/a50f3d93-72dd-4fae-84ae-450ba55f4410",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/962e037b-b45b-4735-bc57-f825c3582cfc",
           "steps": [
@@ -295,7 +295,7 @@
           "groups": [],
           "priority": null,
           "uuid": "7c83c447-755b-47ed-9bda-21dbfe7be8ae",
-          "id": 2982,
+          "id": 770,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -318,8 +318,8 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1675762799,
-          "collection": "/api/3/workflow_collections/72369965-48c9-4fc5-b1c2-35e64333a927",
+          "lastModifyDate": 1677485283,
+          "collection": "/api/3/workflow_collections/a50f3d93-72dd-4fae-84ae-450ba55f4410",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/796b4969-d8f1-4e70-8462-267b154e4201",
           "steps": [
@@ -398,7 +398,7 @@
                   "input": {
                     "params": []
                   },
-                  "_configuration_schema": "[\n   {\n      \"title\":\"Confidence\",\n      \"name\":\"confidence\",\n      \"type\":\"integer\",\n      \"tooltip\":\"Default Confidence score to be set for the feeds\",\n      \"required\":false,\n      \"editable\":true,\n      \"visible\":true,\n      \"value\":90,\n      \"validation\":{\n         \"minlength\":0,\n         \"maxlength\":100\n      }\n   },\n   {\n      \"title\":\"Reputation\",\n      \"name\":\"reputation\",\n      \"type\":\"select\",\n      \"tooltip\":\"Default Reputation to be set for the feeds\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"options\":[\n         \"Good\",\n         \"Suspicious\",\n         \"Malicious\",\n         \"No Reputation Available\",\n         \"TBD\"\n      ],\n      \"value\":\"Good\"\n   },\n   {\n      \"title\":\"TLP\",\n      \"name\":\"tlp\",\n      \"type\":\"select\",\n      \"tooltip\":\"Default TLP to be set for the feeds\",\n      \"required\":false,\n      \"editable\":true,\n      \"visible\":true,\n      \"options\":[\n         \"Red\",\n         \"Amber\",\n         \"Green\",\n         \"White\"\n      ],\n      \"value\":\"White\"\n   }\n]",
+                  "_configuration_schema": "[\n   {\n      \"title\":\"Confidence\",\n      \"name\":\"confidence\",\n      \"type\":\"integer\",\n      \"tooltip\":\"Default Confidence score to be set for the feeds\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"value\":90,\n      \"validation\":{\n         \"minlength\":0,\n         \"maxlength\":100\n      }\n   },\n   {\n      \"title\":\"Reputation\",\n      \"name\":\"reputation\",\n      \"type\":\"select\",\n      \"tooltip\":\"Default Reputation to be set for the feeds\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"options\":[\n         \"Good\",\n         \"Suspicious\",\n         \"Malicious\",\n         \"No Reputation Available\",\n         \"TBD\"\n      ],\n      \"value\":\"Good\"\n   },\n   {\n      \"title\":\"TLP\",\n      \"name\":\"tlp\",\n      \"type\":\"select\",\n      \"tooltip\":\"Default TLP to be set for the feeds\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"options\":[\n         \"Red\",\n         \"Amber\",\n         \"Green\",\n         \"White\"\n      ],\n      \"value\":\"White\"\n   }\n]",
                   "GCPFeedLastAlertPullTime": "GCPFeedLastAlertPullTime_{{vars['audit_info']['cyops_playbook_iri'].split('/')[-1].replace('-','_')}}"
                 }
               },
@@ -486,22 +486,22 @@
                   "batch_size": 100
                 },
                 "resource": {
-                  "tlp": "{{vars.tlp_resolved}}",
+                  "tLP": "{{vars.tlp_resolved}}",
                   "value": "{{vars.item.ipv4Prefix or vars.item.ipv6Prefix}}",
+                  "source": "Google Cloud Platform Whitelist Feed",
                   "__replace": "true",
                   "confidence": "{{vars.confidence}}",
                   "reputation": "{{vars.reputation_resolved}}",
                   "sourceData": "{{vars.item | toJSON}}",
-                  "description": "<p>{{vars.item.type}}</p>",
-                  "indicatorStatus": "/api/3/picklists/2f5cff61-fbff-4bb3-96be-302b78a9fb47",
-                  "typeofindicator": "/api/3/picklists/c0beeda4-2c7a-4214-b7e5-53ba1649539c",
-                  "enrichmentStatus": "/api/3/picklists/a6d9da29-27b1-4b8a-965d-8d91518540d5"
+                  "typeOfFeed": "/api/3/picklists/b788efc2-dadb-4448-9018-043b37266de4"
                 },
                 "operation": "Overwrite",
-                "collection": "/api/3/upsert/indicators",
+                "collection": "/api/3/upsert/threat_intel_feeds",
                 "__recommend": [],
                 "fieldOperation": {
-                  "recordTags": "Overwrite"
+                  "recordTags": "Overwrite",
+                  "threatTypes": "Overwrite",
+                  "killChainPhases": "Overwrite"
                 },
                 "step_variables": []
               },
@@ -590,7 +590,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "85e1dd66-c8de-457a-8e37-21fb014a2280",
-          "id": 2983,
+          "id": 771,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
