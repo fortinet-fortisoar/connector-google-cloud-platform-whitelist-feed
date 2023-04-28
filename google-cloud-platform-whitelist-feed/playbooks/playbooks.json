@@ -7,10 +7,10 @@
       "name": "Sample - Google Cloud Platform Whitelist Feed - 1.0.0",
       "description": "Sample playbooks for \"Google Cloud Platform Whitelist Feed\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
-      "image": "/api/3/images/313da960-26e7-469c-aef7-638d4fee7baf",
-      "id": 91,
-      "createDate": 1675769044.590711,
-      "modifyDate": 1675769044.590711,
+      "image": "/api/3/images/d3cc399a-066f-4516-9456-f37443bdfa71",
+      "id": 164,
+      "createDate": 1682654633.781473,
+      "modifyDate": 1682654633.781473,
       "deletedAt": null,
       "importedBy": [],
       "recordTags": [
@@ -32,7 +32,7 @@
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1675344001,
-          "collection": "/api/3/workflow_collections/a50f3d93-72dd-4fae-84ae-450ba55f4410",
+          "collection": "/api/3/workflow_collections/c450ba22-37b6-43c2-b7fd-d171892ed7ec",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/bf6bf68d-0eae-4d25-ac76-a4fef826baa7",
           "steps": [
@@ -200,7 +200,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "75aebd74-2078-461d-91c1-d8a077488d81",
-          "id": 769,
+          "id": 1771,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -225,8 +225,8 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1675340842,
-          "collection": "/api/3/workflow_collections/a50f3d93-72dd-4fae-84ae-450ba55f4410",
+          "lastModifyDate": 1682655189,
+          "collection": "/api/3/workflow_collections/c450ba22-37b6-43c2-b7fd-d171892ed7ec",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/962e037b-b45b-4735-bc57-f825c3582cfc",
           "steps": [
@@ -295,7 +295,7 @@
           "groups": [],
           "priority": null,
           "uuid": "7c83c447-755b-47ed-9bda-21dbfe7be8ae",
-          "id": 770,
+          "id": 1772,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -318,8 +318,8 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1677485283,
-          "collection": "/api/3/workflow_collections/a50f3d93-72dd-4fae-84ae-450ba55f4410",
+          "lastModifyDate": 1682656146,
+          "collection": "/api/3/workflow_collections/c450ba22-37b6-43c2-b7fd-d171892ed7ec",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/796b4969-d8f1-4e70-8462-267b154e4201",
           "steps": [
@@ -360,6 +360,7 @@
                 "tlp": "White",
                 "tlp_map": "{'Red': {{'TrafficLightProtocol'| picklist('Red') }}, 'Amber': {{'TrafficLightProtocol'| picklist('Amber') }}, 'Green': {{'TrafficLightProtocol'| picklist('Green') }}, 'White': {{'TrafficLightProtocol'| picklist('White') }}}",
                 "confidence": "90",
+                "file_value": "[\"IP ranges that Google makes available to users on the internet\",\"Global and regional external IP address ranges for customer's Google Cloud resources\"]",
                 "reputation": "Good",
                 "output_mode": "Return as a JSON",
                 "reputation_map": "{'Good': {{'IndicatorReputation'| picklist('Good') }}, 'Malicious': {{'IndicatorReputation'| picklist('Malicious') }}, 'Suspicious': {{'IndicatorReputation'| picklist('Suspicious') }}, 'TBD': {{'IndicatorReputation'| picklist('TBD') }}, 'No Reputation Available': {{'IndicatorReputation' | picklist('No Reputation Available') }}}",
@@ -398,7 +399,7 @@
                   "input": {
                     "params": []
                   },
-                  "_configuration_schema": "[\n   {\n      \"title\":\"Confidence\",\n      \"name\":\"confidence\",\n      \"type\":\"integer\",\n      \"tooltip\":\"Default Confidence score to be set for the feeds\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"value\":90,\n      \"validation\":{\n         \"minlength\":0,\n         \"maxlength\":100\n      }\n   },\n   {\n      \"title\":\"Reputation\",\n      \"name\":\"reputation\",\n      \"type\":\"select\",\n      \"tooltip\":\"Default Reputation to be set for the feeds\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"options\":[\n         \"Good\",\n         \"Suspicious\",\n         \"Malicious\",\n         \"No Reputation Available\",\n         \"TBD\"\n      ],\n      \"value\":\"Good\"\n   },\n   {\n      \"title\":\"TLP\",\n      \"name\":\"tlp\",\n      \"type\":\"select\",\n      \"tooltip\":\"Default TLP to be set for the feeds\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"options\":[\n         \"Red\",\n         \"Amber\",\n         \"Green\",\n         \"White\"\n      ],\n      \"value\":\"White\"\n   }\n]",
+                  "_configuration_schema": "[\n   {\n      \"title\":\"Confidence\",\n      \"name\":\"confidence\",\n      \"type\":\"integer\",\n      \"tooltip\":\"Default Confidence score to be set for the feeds\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"value\":90,\n      \"validation\":{\n         \"minlength\":0,\n         \"maxlength\":100\n      }\n   },\n   {\n      \"title\":\"Reputation\",\n      \"name\":\"reputation\",\n      \"type\":\"select\",\n      \"tooltip\":\"Default Reputation to be set for the feeds\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"options\":[\n         \"Good\",\n         \"Suspicious\",\n         \"Malicious\",\n         \"No Reputation Available\",\n         \"TBD\"\n      ],\n      \"value\":\"Good\"\n   },\n   {\n      \"title\":\"TLP\",\n      \"name\":\"tlp\",\n      \"type\":\"select\",\n      \"tooltip\":\"Default TLP to be set for the feeds\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"options\":[\n         \"Red\",\n         \"Amber\",\n         \"Green\",\n         \"White\"\n      ],\n      \"value\":\"White\"\n   },\n   {\n      \"title\":\"File\",\n      \"name\":\"file_value\",\n      \"type\":\"multiselect\",\n      \"tooltip\":\"Select the file from which you want to fetch the data.\",\n      \"required\":true,\n      \"editable\":true,\n      \"visible\":true,\n      \"options\":[\n         \"IP ranges that Google makes available to users on the internet\",\n         \"Global and regional external IP address ranges for customer's Google Cloud resources\"\n      ]\n   }\n]",
                   "GCPFeedLastAlertPullTime": "GCPFeedLastAlertPullTime_{{vars['audit_info']['cyops_playbook_iri'].split('/')[-1].replace('-','_')}}"
                 }
               },
@@ -457,7 +458,9 @@
               "arguments": {
                 "name": "Google Cloud Platform Whitelist Feed",
                 "config": "ffd5c0dc-19bf-4450-a9fc-79d927572f1a",
-                "params": [],
+                "params": {
+                  "file_value": "{{vars.file_value}}"
+                },
                 "version": "1.0.0",
                 "connector": "google-cloud-platform-whitelist-feed",
                 "operation": "ip_ranges",
@@ -489,7 +492,7 @@
                   "tLP": "{{vars.tlp_resolved}}",
                   "value": "{{vars.item.ipv4Prefix or vars.item.ipv6Prefix}}",
                   "source": "Google Cloud Platform Whitelist Feed",
-                  "__replace": "true",
+                  "__replace": "false",
                   "confidence": "{{vars.confidence}}",
                   "reputation": "{{vars.reputation_resolved}}",
                   "sourceData": "{{vars.item | toJSON}}",
@@ -590,7 +593,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "85e1dd66-c8de-457a-8e37-21fb014a2280",
-          "id": 771,
+          "id": 1773,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,

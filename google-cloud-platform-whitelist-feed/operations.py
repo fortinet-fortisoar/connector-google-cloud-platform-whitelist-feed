@@ -58,17 +58,17 @@ class GoogleCloudPlatformWhitelistFeed:
 
 def ip_ranges(config, params):
     ob = GoogleCloudPlatformWhitelistFeed(config)
-    res1 = ob.api_request(Method.GET, "goog.json")
-    prefixes1 = res1.get("prefixes", [])
-    res2 = ob.api_request(Method.GET, "cloud.json")
-    prefixes2 = res2.get("prefixes", [])
-    all_prefixes = prefixes2 + prefixes1
-    res2["prefixes"] = all_prefixes
-    return res2
+    file_value = params.get("file_value", [])
+    res, prefixes = {}, []
+    for _file in file_value:
+        res = ob.api_request(Method.GET, FILE_MAPPING.get(_file))
+        prefixes += res.get("prefixes", [])
+    res["prefixes"] = prefixes
+    return res
 
 
 def check_health_ex(config):
-    ip_ranges(config, None)
+    ip_ranges(config, {"file_value": [FILE1]})
     return True
 
 

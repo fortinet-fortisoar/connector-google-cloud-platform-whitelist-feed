@@ -55,7 +55,22 @@
       "annotation": "get_ip_ranges",
       "title": "Get IP Ranges",
       "enabled": true,
-      "parameters": [],
+      "parameters": [
+        {
+          "title": "File",
+          "name": "file_value",
+          "tooltip": "Select the file from which you want to fetch the data.",
+          "description": "Select the file from which you want to fetch the data.",
+          "type": "multiselect",
+          "options": [
+            "IP ranges that Google makes available to users on the internet",
+            "Global and regional external IP address ranges for customer's Google Cloud resources"
+          ],
+          "visible": true,
+          "editable": true,
+          "required": true
+        }
+      ],
       "output_schema": {
         "syncToken": "",
         "creationTime": "",
