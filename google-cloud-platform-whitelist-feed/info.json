@@ -50,7 +50,7 @@
   "operations": [
     {
       "operation": "ip_ranges",
-      "description": "Retrieves the IP ranges that Google makes available to users on the internet.",
+      "description": "Retrieves the IP ranges that Google publishes for users on the internet.",
       "category": "investigation",
       "annotation": "get_ip_ranges",
       "title": "Get IP Ranges",
@@ -59,8 +59,8 @@
         {
           "title": "File",
           "name": "file_value",
-          "tooltip": "Select the file from which you want to fetch the data.",
-          "description": "Select the file from which you want to fetch the data.",
+          "tooltip": "Select the file from which you want to fetch the data. Select any or all of the following options.",
+          "description": "Select the file source from which to fetch the data. Select any or all of the following options: \n\nIP ranges that Google makes available to users on the internet \n\nGlobal and regional external IP address ranges for customer's Google Cloud resources",
           "type": "multiselect",
           "options": [
             "IP ranges that Google makes available to users on the internet",
